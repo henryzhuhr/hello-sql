@@ -1,0 +1,19 @@
+{
+  "name": "@henryzhuhr/hello-go",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "henryzhuhr <henry.zhuhr@icloud.com> (https://github.com/henryzhuhr)",
+  "repository": "github:henryzhuhr/hello-go",
+  "license": "Apache-2.0",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:dev:expose": "vitepress dev --host",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.79.3",
+    "vitepress": "^1.3.4"
+  }
+}

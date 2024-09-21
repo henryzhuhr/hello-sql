@@ -1,4 +1,12 @@
 # =========================
+#   Vitepress.gitignore
+# =========================
+**/node_modules
+**/.vitepress/dist
+**/.vitepress/cache
+
+
+# =========================
 #   macOS.gitignore
 # =========================
 # General
