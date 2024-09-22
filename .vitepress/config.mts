@@ -6,10 +6,9 @@ import { DefaultTheme, defineConfig } from 'vitepress'
 const sidebar: DefaultTheme.Sidebar = [
   {
     collapsed: false,
-    text: '准备工作',
-    base: '/starter/',
+    text: '数据库',
     items: [
-      { text: '安装', link: '/install' },
+      { text: 'PostgreSQL', link: '/postgresql' },
     ]
   },
 ]
