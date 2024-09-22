@@ -1,0 +1,48 @@
+
+services:
+  development_env:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile
+    image: development_env:latest  # 构建后镜像的名称和标签
+    networks:
+      - hello-sql-network
+    depends_on:
+      - postgres_db
+    environment:
+      PGUSER: postgres # PostgreSQL 用户名
+      PGPASSWORD: mysecretpassword # PostgreSQL 用户密码
+      PGDATABASE: mydatabase # 初始化数据库名称
+      PGHOST: postgres_db # PostgreSQL 服务名称
+      PGPORT: 5432
+      PG_CONNECTION_URL: postgresql://postgres:mysecretpassword@postgres_db:5432/mydatabase
+    volumes:
+      - .:/root/hello-sql
+    working_dir: /root/hello-sql
+    # sleep infinity 用于保持容器运行，否则 vscode 无法进入容器，建议写在 .devcontainer/docker-compose.yml 文件中
+    command: ["sleep", 'infinity']
+  
+  postgres_db:  # 服务名称
+    build:
+      context: .
+      dockerfile: dockerfiles/postgresql.dockerfile
+    image: postgresql_custom:latest  # 构建后镜像的名称和标签
+    restart: always
+    environment:
+      POSTGRES_USER: postgres # PostgreSQL 用户名
+      POSTGRES_PASSWORD: mysecretpassword # PostgreSQL 用户密码
+      POSTGRES_DB: mydatabase # 初始化数据库名称
+    networks:
+      - hello-sql-network  # 网络名称   
+    volumes:
+      - pg_data:/var/lib/postgresql/data  # 数据卷，用于持久化数据
+    ports:
+      - "5432:5432"
+  
+
+networks:
+  hello-sql-network:
+  
+volumes:
+  pg_data:  # 数据卷名称
+  
