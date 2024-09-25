@@ -21,7 +21,7 @@ const themeConfig: DefaultTheme.Config = {
   // logo: '/motorcycle.svg',
   sidebar: sidebar, // 侧边栏配置
   socialLinks: [
-    { icon: 'github', link: 'https://henryzhuhr.github.io/hello-sql/' }
+    { icon: 'github', link: 'https://github.com/henryzhuhr/hello-sql/' }
   ],
   darkModeSwitchLabel: '外观',          // 深色模式开关标签
   lightModeSwitchTitle: '切换到浅色模式', // 悬停时显示的浅色模式开关标题
@@ -36,7 +36,7 @@ const themeConfig: DefaultTheme.Config = {
   },
   footer: {
     message: 'Powered By <a href="https://vitepress.dev/">Vitepress</a>',
-    copyright: `All rights reserved © 2024-${new Date().getFullYear()} <a href="https://github.com/HenryZhuHR?tab=repositories">HenryZhuHR</a>`
+    copyright: `All rights reserved © 2024-${new Date().getFullYear()} <a href="https://github.com/henryzhuhr?tab=repositories">henryzhuhr</a>`
   },
   outline: {
     label: '页面导航'
