@@ -21,7 +21,7 @@ const themeConfig: DefaultTheme.Config = {
   // logo: '/motorcycle.svg',
   sidebar: sidebar, // 侧边栏配置
   socialLinks: [
-    { icon: 'github', link: 'https://github.com/henryzhuhr/hello-sql/' }
+    { icon: 'github', link: 'https://github.com/henryzhuhr/hello-database/' }
   ],
   darkModeSwitchLabel: '外观',          // 深色模式开关标签
   lightModeSwitchTitle: '切换到浅色模式', // 悬停时显示的浅色模式开关标题
@@ -55,9 +55,9 @@ const themeConfig: DefaultTheme.Config = {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: 'docs',
-  base: '/hello-sql/',
-  title: "Hello SQL",
-  description: "Learning SQL",
+  base: '/hello-database/',
+  title: "Hello Database",
+  description: "Learning Database",
   themeConfig: themeConfig,
   lastUpdated: true,
   vite: {// Vite 配置选项
