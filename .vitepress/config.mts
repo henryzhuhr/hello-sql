@@ -12,6 +12,14 @@ const sidebar: DefaultTheme.Sidebar = [
       { text: '安装', link: '/install' },
     ]
   },
+  {
+    collapsed: false,
+    text: 'MySQL',
+    base: '/mysql/',
+    items: [
+      { text: 'MySQL基础', link: 'mysql' },
+    ]
+  },
 ]
 
 /**
@@ -60,6 +68,9 @@ export default defineConfig({
   description: "Learning Database",
   themeConfig: themeConfig,
   lastUpdated: true,
+  markdown: {
+    math: true
+  },
   vite: {// Vite 配置选项
     publicDir: '../.vitepress/public', // 相对于 docs 目录
     css: {
